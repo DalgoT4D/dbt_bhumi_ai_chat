@@ -1,0 +1,24 @@
+version: 2
+models:
+- name: overall_Math_analysis_status_2525
+  description: City-grade summary of student counts by math status band across baseline,
+    midline, and endline. Use this model to compare how many students fall into each
+    math performance band in each round.
+  columns:
+  - name: city
+    description: City for the reporting row.
+  - name: grade
+    description: Grade for the reporting row.
+  - name: math_status
+    description: Math performance status band for this row. Observed values in the
+      warehouse include Emergent, Below Grade Level, At Grade Level, Above Grade Level,
+      and Not Assessed.
+  - name: student_count_base
+    description: Number of distinct baseline students in this city-grade-math status
+      bucket.
+  - name: student_count_mid
+    description: Number of distinct midline students in this city-grade-math status
+      bucket.
+  - name: student_count_end
+    description: Number of distinct endline students in this city-grade-math status
+      bucket.

@@ -1,0 +1,25 @@
+version: 2
+models:
+- name: overall_RC_analysis_levels_2525
+  description: City-grade summary of student counts by reading comprehension level
+    across baseline, midline, and endline. The `rc_level` field is carried from the
+    source assessments and allows comparison of how students move between reading
+    comprehension levels over time.
+  columns:
+  - name: city
+    description: City for the reporting row.
+  - name: grade
+    description: Grade for the reporting row.
+  - name: rc_level
+    description: Reading comprehension level value from the student fact table for
+      this row. Observed values in the warehouse include numeric steps such as 0,
+      0.2, 0.5, 1, 1.5, 2, and 2.5, plus Emergent and Not Assessed.
+  - name: student_count_base
+    description: Number of distinct baseline students in this city-grade-reading comprehension
+      level bucket.
+  - name: student_count_mid
+    description: Number of distinct midline students in this city-grade-reading comprehension
+      level bucket.
+  - name: student_count_end
+    description: Number of distinct endline students in this city-grade-reading comprehension
+      level bucket.

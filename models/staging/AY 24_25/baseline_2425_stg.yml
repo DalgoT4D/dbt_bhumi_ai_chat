@@ -1,0 +1,102 @@
+version: 2
+models:
+- name: baseline_2425_stg
+  description: |-
+    Cleaned baseline assessment staging model for AY 2024-25. Standardizes student, school, cohort, and assessment score fields from the raw baseline sheet and keeps one row per student record with a nonblank student ID.
+
+    Grain: one row per baseline student record.
+
+    Reads sources `fellowship_24_25_data.Raw_Data_Baseline`.
+  columns:
+  - name: student_id_base
+    description: Student identifier captured in the baseline data.
+  - name: city_base
+    description: City recorded for the student in the baseline assessment.
+  - name: pm_name_base
+    description: Program manager assigned to the student in the baseline assessment.
+  - name: school_name_base
+    description: School name recorded in the baseline assessment.
+  - name: classroom_id_base
+    description: Classroom identifier recorded in the baseline assessment.
+  - name: fellow_name_base
+    description: Fellow responsible for the classroom in the baseline assessment.
+  - name: cohort_base
+    description: Cohort number recorded in the baseline assessment.
+  - name: grade_taught_base
+    description: Grade taught for the student in the baseline assessment.
+  - name: student_name_base
+    description: Student name captured in the baseline assessment.
+  - name: rc_level_base
+    description: Baseline reading comprehension level.
+  - name: rc_grade_level_base
+    description: Baseline reading comprehension grade level.
+  - name: rc_status_base
+    description: Baseline reading comprehension status.
+  - name: rf_status_base
+    description: Baseline reading fluency status.
+  - name: math_level_base
+    description: Baseline math level.
+  - name: math_status_base
+    description: Baseline math status.
+  - name: math_mastery_base
+    description: Baseline math mastery percentage.
+  - name: math_perc_numbers_base
+    description: Baseline math percentage in the Numbers domain.
+  - name: math_perc_patterns_base
+    description: Baseline math percentage in the Patterns domain.
+  - name: math_perc_geometry_base
+    description: Baseline math percentage in the Geometry domain.
+  - name: math_perc_mensuration_base
+    description: Baseline math percentage in the Mensuration domain.
+  - name: math_perc_time_base
+    description: Baseline math percentage in the Time domain.
+  - name: math_perc_operations_base
+    description: Baseline math percentage in the Operations domain.
+  - name: math_perc_data_handling_base
+    description: Baseline math percentage in the Data Handling domain.
+  - name: factual_base
+    description: Baseline factual comprehension score.
+  - name: inference_base
+    description: Baseline inference score.
+  - name: critical_thinking_base
+    description: Baseline critical thinking score.
+  - name: vocabulary_base
+    description: Baseline vocabulary score.
+  - name: grammar_base
+    description: Baseline grammar score.
+  - name: letter_sounds_base
+    description: Baseline letter sounds score.
+  - name: cvc_words_base
+    description: Baseline CVC words score.
+  - name: blends_base
+    description: Baseline blends score.
+  - name: consonant_diagraph_base
+    description: Baseline consonant diagraph score.
+  - name: magic_e_words_base
+    description: Baseline magic E words score.
+  - name: vowel_diagraphs_base
+    description: Baseline vowel diagraphs score.
+  - name: multi_syllabelle_words_base
+    description: Baseline multi-syllabelle words score.
+  - name: passage_1_base
+    description: Baseline Passage 1 score.
+  - name: passage_2_base
+    description: Baseline Passage 2 score.
+  - name: rf_perc_base
+    description: Baseline reading fluency percentage.
+  - name: developing_base
+    description: Baseline Developing-level count or flag from the source assessment
+      sheet.
+  - name: beginner_base
+    description: Baseline Beginner-level count or flag from the source assessment
+      sheet.
+  - name: intermediate_base
+    description: Baseline Intermediate-level count or flag from the source assessment
+      sheet.
+  - name: advanced_base
+    description: Baseline Advanced-level count or flag from the source assessment
+      sheet.
+  - name: rc_assessed_perc_base
+    description: Baseline reading comprehension assessed percentage or label.
+  - name: rf_code_base
+    description: Baseline reading fluency code.

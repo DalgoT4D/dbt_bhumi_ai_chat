@@ -1,0 +1,274 @@
+version: 2
+models:
+- name: base_mid_end_comb_scores_2425_fct
+  description: Student-level assessment fact table for AY 2024-25 that aligns baseline,
+    midline, and endline reading comprehension, reading fluency, and math metrics
+    to a shared `student_id`. This is the main score spine used by the reporting layer,
+    carrying round-specific statuses, levels, percentages, domain scores, and subskill
+    scores for each student.
+  columns:
+  - name: student_id
+    description: Shared student identifier used to align baseline, midline, and endline
+      metrics for the same student.
+  - name: rc_level_base
+    description: Baseline reading comprehension level from the source assessment sheet.
+      Observed values in the warehouse include numeric steps such as 0, 0.2, 0.5,
+      1, 1.5, 2, and 2.5, plus Emergent and Not Assessed.
+  - name: rc_grade_level_base
+    description: Baseline reading comprehension grade-level field from the source
+      assessment sheet.
+  - name: rc_status_base
+    description: Baseline reading comprehension status band from the source assessment
+      sheet. Observed values include Below Grade Level, At Grade Level, and Above
+      Grade Level.
+  - name: rc_assessed_perc_base
+    description: Baseline value from the source `RC_Assessed___` field, carried through
+      as the sheet's assessed percentage or score value.
+  - name: rc_level_mid
+    description: Midline reading comprehension level from the source assessment sheet.
+      Observed values in the warehouse include numeric steps such as 0, 0.2, 0.5,
+      1, 1.5, 2, and 2.5, plus Emergent and Not Assessed.
+  - name: rc_grade_level_mid
+    description: Midline reading comprehension grade-level field from the source assessment
+      sheet.
+  - name: rc_status_mid
+    description: Midline reading comprehension status band from the source assessment
+      sheet. Observed values include Below Grade Level, At Grade Level, and Above
+      Grade Level.
+  - name: rc_assessed_perc_mid
+    description: Midline value from the source `RC_Assessed___` field, carried through
+      as the sheet's assessed percentage or score value.
+  - name: rc_level_end
+    description: Endline reading comprehension level from the source assessment sheet.
+      Observed values in the warehouse include numeric steps such as 0, 0.2, 0.5,
+      1, 1.5, 2, and 2.5, plus Emergent and Not Assessed.
+  - name: rc_grade_level_end
+    description: Endline reading comprehension grade-level field from the source assessment
+      sheet.
+  - name: rc_status_end
+    description: Endline reading comprehension status band from the source assessment
+      sheet. Observed values include Below Grade Level, At Grade Level, and Above
+      Grade Level.
+  - name: rc_assessed_perc_end
+    description: Endline value from the source `RC_Assessed___` field, carried through
+      as the sheet's assessed percentage or score value.
+  - name: rf_status_base
+    description: Baseline reading fluency status band from the source assessment sheet.
+      Observed values include Advanced, Beginner, Developing, Emergent, and Not Assessed.
+  - name: rf_perc_base
+    description: Baseline student-level reading fluency percentage score.
+  - name: rf_code_base
+    description: Baseline reading fluency code from the source assessment sheet. Observed
+      values include 0 through 5.
+  - name: rf_status_mid
+    description: Midline reading fluency status band from the source assessment sheet.
+      Observed values include Advanced, Beginner, Developing, Emergent, and Not Assessed.
+  - name: rf_perc_mid
+    description: Midline student-level reading fluency percentage score.
+  - name: rf_code_mid
+    description: Midline reading fluency code from the source assessment sheet. Observed
+      values include 0 through 5.
+  - name: rf_status_end
+    description: Endline reading fluency status band from the source assessment sheet.
+      Observed values include Advanced, Beginner, Developing, Emergent, and Not Assessed.
+  - name: rf_perc_end
+    description: Endline student-level reading fluency percentage score.
+  - name: rf_code_end
+    description: Endline reading fluency code from the source assessment sheet. Observed
+      values include 0 through 5.
+  - name: math_level_base
+    description: Baseline math level bucket from the source assessment sheet. Observed
+      values include Emergent, G1-G5, Above Grade 5, and Not Assessed.
+  - name: math_status_base
+    description: Baseline math status band from the source assessment sheet. Observed
+      values include Emergent, Below Grade Level, At Grade Level, Above Grade Level,
+      and Not Assessed.
+  - name: math_mastery_base
+    description: Baseline overall math mastery percentage for the student.
+  - name: math_level_mid
+    description: Midline math level bucket from the source assessment sheet. Observed
+      values include Emergent, G1-G5, Above Grade 5, and Not Assessed.
+  - name: math_status_mid
+    description: Midline math status band from the source assessment sheet. Observed
+      values include Emergent, Below Grade Level, At Grade Level, Above Grade Level,
+      and Not Assessed.
+  - name: math_mastery_mid
+    description: Midline overall math mastery percentage for the student.
+  - name: math_level_end
+    description: Endline math level bucket from the source assessment sheet. Observed
+      values include Emergent, G1-G5, Above Grade 5, and Not Assessed.
+  - name: math_status_end
+    description: Endline math status band from the source assessment sheet. Observed
+      values include Emergent, Below Grade Level, At Grade Level, Above Grade Level,
+      and Not Assessed.
+  - name: math_mastery_end
+    description: Endline overall math mastery percentage for the student.
+  - name: math_perc_numbers_base
+    description: Baseline student-level math mastery percentage in the Numbers domain.
+  - name: math_perc_patterns_base
+    description: Baseline student-level math mastery percentage in the Patterns domain.
+  - name: math_perc_geometry_base
+    description: Baseline student-level math mastery percentage in the Geometry domain.
+  - name: math_perc_mensuration_base
+    description: Baseline student-level math mastery percentage in the Mensuration
+      domain.
+  - name: math_perc_time_base
+    description: Baseline student-level math mastery percentage in the Time domain.
+  - name: math_perc_operations_base
+    description: Baseline student-level math mastery percentage in the Operations
+      domain.
+  - name: math_perc_data_handling_base
+    description: Baseline student-level math mastery percentage in the Data Handling
+      domain.
+  - name: math_perc_numbers_mid
+    description: Midline student-level math mastery percentage in the Numbers domain.
+  - name: math_perc_patterns_mid
+    description: Midline student-level math mastery percentage in the Patterns domain.
+  - name: math_perc_geometry_mid
+    description: Midline student-level math mastery percentage in the Geometry domain.
+  - name: math_perc_mensuration_mid
+    description: Midline student-level math mastery percentage in the Mensuration
+      domain.
+  - name: math_perc_time_mid
+    description: Midline student-level math mastery percentage in the Time domain.
+  - name: math_perc_operations_mid
+    description: Midline student-level math mastery percentage in the Operations domain.
+  - name: math_perc_data_handling_mid
+    description: Midline student-level math mastery percentage in the Data Handling
+      domain.
+  - name: math_perc_numbers_end
+    description: Endline student-level math mastery percentage in the Numbers domain.
+  - name: math_perc_patterns_end
+    description: Endline student-level math mastery percentage in the Patterns domain.
+  - name: math_perc_geometry_end
+    description: Endline student-level math mastery percentage in the Geometry domain.
+  - name: math_perc_mensuration_end
+    description: Endline student-level math mastery percentage in the Mensuration
+      domain.
+  - name: math_perc_time_end
+    description: Endline student-level math mastery percentage in the Time domain.
+  - name: math_perc_operations_end
+    description: Endline student-level math mastery percentage in the Operations domain.
+  - name: math_perc_data_handling_end
+    description: Endline student-level math mastery percentage in the Data Handling
+      domain.
+  - name: factual_base
+    description: Baseline student-level Factual reading comprehension score.
+  - name: inference_base
+    description: Baseline student-level Inference reading comprehension score.
+  - name: critical_thinking_base
+    description: Baseline student-level Critical Thinking reading comprehension score.
+  - name: factual_mid
+    description: Midline student-level Factual reading comprehension score.
+  - name: inference_mid
+    description: Midline student-level Inference reading comprehension score.
+  - name: critical_thinking_mid
+    description: Midline student-level Critical Thinking reading comprehension score.
+  - name: factual_end
+    description: Endline student-level Factual reading comprehension score.
+  - name: inference_end
+    description: Endline student-level Inference reading comprehension score.
+  - name: critical_thinking_end
+    description: Endline student-level Critical Thinking reading comprehension score.
+  - name: vocabulary_base
+    description: Baseline student-level Vocabulary reading comprehension score.
+  - name: grammar_base
+    description: Baseline student-level Grammar reading comprehension score.
+  - name: vocabulary_mid
+    description: Midline student-level Vocabulary reading comprehension score.
+  - name: grammar_mid
+    description: Midline student-level Grammar reading comprehension score.
+  - name: vocabulary_end
+    description: Endline student-level Vocabulary reading comprehension score.
+  - name: grammar_end
+    description: Endline student-level Grammar reading comprehension score.
+  - name: letter_sounds_base
+    description: Baseline student-level Letter Sounds reading fluency score.
+  - name: cvc_words_base
+    description: Baseline student-level CVC Words reading fluency score.
+  - name: blends_base
+    description: Baseline student-level Blends reading fluency score.
+  - name: consonant_diagraph_base
+    description: Baseline student-level Consonant Diagraph reading fluency score.
+  - name: magic_e_words_base
+    description: Baseline student-level Magic E Words reading fluency score.
+  - name: vowel_diagraphs_base
+    description: Baseline student-level Vowel Diagraphs reading fluency score.
+  - name: multi_syllabelle_words_base
+    description: Baseline student-level Multi-syllable Words reading fluency score.
+  - name: passage_1_base
+    description: Baseline student-level Passage 1 reading fluency score.
+  - name: passage_2_base
+    description: Baseline student-level Passage 2 reading fluency score.
+  - name: letter_sounds_mid
+    description: Midline student-level Letter Sounds reading fluency score.
+  - name: cvc_words_mid
+    description: Midline student-level CVC Words reading fluency score.
+  - name: blends_mid
+    description: Midline student-level Blends reading fluency score.
+  - name: consonant_diagraph_mid
+    description: Midline student-level Consonant Diagraph reading fluency score.
+  - name: magic_e_words_mid
+    description: Midline student-level Magic E Words reading fluency score.
+  - name: vowel_diagraphs_mid
+    description: Midline student-level Vowel Diagraphs reading fluency score.
+  - name: multi_syllabelle_words_mid
+    description: Midline student-level Multi-syllable Words reading fluency score.
+  - name: passage_1_mid
+    description: Midline student-level Passage 1 reading fluency score.
+  - name: passage_2_mid
+    description: Midline student-level Passage 2 reading fluency score.
+  - name: letter_sounds_end
+    description: Endline student-level Letter Sounds reading fluency score.
+  - name: cvc_words_end
+    description: Endline student-level CVC Words reading fluency score.
+  - name: blends_end
+    description: Endline student-level Blends reading fluency score.
+  - name: consonant_diagraph_end
+    description: Endline student-level Consonant Diagraph reading fluency score.
+  - name: magic_e_words_end
+    description: Endline student-level Magic E Words reading fluency score.
+  - name: vowel_diagraphs_end
+    description: Endline student-level Vowel Diagraphs reading fluency score.
+  - name: multi_syllabelle_words_end
+    description: Endline student-level Multi-syllable Words reading fluency score.
+  - name: passage_1_end
+    description: Endline student-level Passage 1 reading fluency score.
+  - name: passage_2_end
+    description: Endline student-level Passage 2 reading fluency score.
+  - name: developing_base
+    description: Baseline raw value carried from the source assessment sheet for the
+      Developing reading fluency distribution field.
+  - name: beginner_base
+    description: Baseline raw value carried from the source assessment sheet for the
+      Beginner reading fluency distribution field.
+  - name: intermediate_base
+    description: Baseline raw value carried from the source assessment sheet for the
+      Intermediate reading fluency distribution field.
+  - name: advanced_base
+    description: Baseline raw value carried from the source assessment sheet for the
+      Advanced reading fluency distribution field.
+  - name: developing_mid
+    description: Midline raw value carried from the source assessment sheet for the
+      Developing reading fluency distribution field.
+  - name: beginner_mid
+    description: Midline raw value carried from the source assessment sheet for the
+      Beginner reading fluency distribution field.
+  - name: intermediate_mid
+    description: Midline raw value carried from the source assessment sheet for the
+      Intermediate reading fluency distribution field.
+  - name: advanced_mid
+    description: Midline raw value carried from the source assessment sheet for the
+      Advanced reading fluency distribution field.
+  - name: developing_end
+    description: Endline raw value carried from the source assessment sheet for the
+      Developing reading fluency distribution field.
+  - name: beginner_end
+    description: Endline raw value carried from the source assessment sheet for the
+      Beginner reading fluency distribution field.
+  - name: intermediate_end
+    description: Endline raw value carried from the source assessment sheet for the
+      Intermediate reading fluency distribution field.
+  - name: advanced_end
+    description: Endline raw value carried from the source assessment sheet for the
+      Advanced reading fluency distribution field.

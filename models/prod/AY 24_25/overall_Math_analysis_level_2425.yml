@@ -1,0 +1,23 @@
+version: 2
+models:
+- name: overall_Math_analysis_level_2425
+  description: City-grade summary of student counts by math level bucket across baseline,
+    midline, and endline. The bucket value comes directly from the score fact and
+    can be used to compare how students shift between math level groups over time.
+  columns:
+  - name: city
+    description: City for the reporting row.
+  - name: grade
+    description: Grade for the reporting row.
+  - name: math_level
+    description: Math level bucket from the student fact table for this row. Observed
+      values in the warehouse include Emergent, G1-G5, Above Grade 5, and Not Assessed.
+  - name: student_count_base
+    description: Number of distinct baseline students in this city-grade-math level
+      bucket.
+  - name: student_count_mid
+    description: Number of distinct midline students in this city-grade-math level
+      bucket.
+  - name: student_count_end
+    description: Number of distinct endline students in this city-grade-math level
+      bucket.

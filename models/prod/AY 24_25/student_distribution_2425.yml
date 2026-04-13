@@ -1,0 +1,29 @@
+version: 2
+models:
+- name: student_distribution_2425
+  description: Student distribution summary by city, grade, cohort, fellow, school,
+    and program manager across baseline, midline, and endline. Each round count is
+    the number of distinct students present in that round for the exact grouping on
+    the row.
+  columns:
+  - name: city
+    description: City for the reporting row.
+  - name: grade
+    description: Grade for the reporting row.
+  - name: cohort
+    description: Cohort for the reporting row.
+  - name: fellow_name
+    description: Fellow name for the reporting row.
+  - name: school_name
+    description: School name for the reporting row.
+  - name: pm_name
+    description: Program manager name for the reporting row.
+  - name: student_count_base
+    description: Number of distinct students with `baseline_attendence` = true in
+      this city-grade-cohort-fellow-school-program manager group.
+  - name: student_count_mid
+    description: Number of distinct students with `midline_attendence` = true in this
+      city-grade-cohort-fellow-school-program manager group.
+  - name: student_count_end
+    description: Number of distinct students with `endline_attendence` = true in this
+      city-grade-cohort-fellow-school-program manager group.

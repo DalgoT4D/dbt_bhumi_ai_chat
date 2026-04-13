@@ -1,0 +1,57 @@
+version: 2
+models:
+- name: overall_RC_analysis_subjects_2525
+  description: City-grade summary of average reading comprehension component scores
+    across baseline, midline, and endline. The model aggregates the student-level
+    Factual, Inference, Critical Thinking, Vocabulary, and Grammar scores for students
+    present in each round.
+  columns:
+  - name: city
+    description: City for the reporting row.
+  - name: grade
+    description: Grade for the reporting row.
+  - name: factual_base
+    description: Average student-level Factual reading comprehension score for baseline
+      students in this city-grade group.
+  - name: factual_mid
+    description: Average student-level Factual reading comprehension score for midline
+      students in this city-grade group.
+  - name: factual_end
+    description: Average student-level Factual reading comprehension score for endline
+      students in this city-grade group.
+  - name: inference_base
+    description: Average student-level Inference reading comprehension score for baseline
+      students in this city-grade group.
+  - name: inference_mid
+    description: Average student-level Inference reading comprehension score for midline
+      students in this city-grade group.
+  - name: inference_end
+    description: Average student-level Inference reading comprehension score for endline
+      students in this city-grade group.
+  - name: critical_thinking_base
+    description: Average student-level Critical Thinking reading comprehension score
+      for baseline students in this city-grade group.
+  - name: critical_thinking_mid
+    description: Average student-level Critical Thinking reading comprehension score
+      for midline students in this city-grade group.
+  - name: critical_thinking_end
+    description: Average student-level Critical Thinking reading comprehension score
+      for endline students in this city-grade group.
+  - name: vocabulary_base
+    description: Average student-level Vocabulary reading comprehension score for
+      baseline students in this city-grade group.
+  - name: vocabulary_mid
+    description: Average student-level Vocabulary reading comprehension score for
+      midline students in this city-grade group.
+  - name: vocabulary_end
+    description: Average student-level Vocabulary reading comprehension score for
+      endline students in this city-grade group.
+  - name: grammar_base
+    description: Average student-level Grammar reading comprehension score for baseline
+      students in this city-grade group.
+  - name: grammar_mid
+    description: Average student-level Grammar reading comprehension score for midline
+      students in this city-grade group.
+  - name: grammar_end
+    description: Average student-level Grammar reading comprehension score for endline
+      students in this city-grade group.

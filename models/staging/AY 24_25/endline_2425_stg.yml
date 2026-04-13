@@ -1,0 +1,100 @@
+version: 2
+models:
+- name: endline_2425_stg
+  description: |-
+    Cleaned endline assessment staging model for AY 2024-25. Standardizes student, school, cohort, and assessment score fields from the raw endline sheet and keeps one row per student record with a nonblank student ID.
+
+    Grain: one row per endline student record.
+
+    Reads sources `fellowship_24_25_data.Raw_Data_Endline`.
+  columns:
+  - name: student_id_end
+    description: Student identifier captured in the endline data.
+  - name: city_end
+    description: City recorded for the student in the endline assessment.
+  - name: pm_name_end
+    description: Program manager assigned to the student in the endline assessment.
+  - name: school_name_end
+    description: School name recorded in the endline assessment.
+  - name: classroom_id_end
+    description: Classroom identifier recorded in the endline assessment.
+  - name: fellow_name_end
+    description: Fellow responsible for the classroom in the endline assessment.
+  - name: cohort_end
+    description: Cohort number recorded in the endline assessment.
+  - name: grade_taught_end
+    description: Grade taught for the student in the endline assessment.
+  - name: student_name_end
+    description: Student name captured in the endline assessment.
+  - name: rc_level_end
+    description: Endline reading comprehension level.
+  - name: rc_grade_level_end
+    description: Endline reading comprehension grade level.
+  - name: rc_status_end
+    description: Endline reading comprehension status.
+  - name: rf_status_end
+    description: Endline reading fluency status.
+  - name: math_level_end
+    description: Endline math level.
+  - name: math_status_end
+    description: Endline math status.
+  - name: math_mastery_end
+    description: Endline math mastery percentage.
+  - name: math_perc_numbers_end
+    description: Endline math percentage in the Numbers domain.
+  - name: math_perc_patterns_end
+    description: Endline math percentage in the Patterns domain.
+  - name: math_perc_geometry_end
+    description: Endline math percentage in the Geometry domain.
+  - name: math_perc_mensuration_end
+    description: Endline math percentage in the Mensuration domain.
+  - name: math_perc_time_end
+    description: Endline math percentage in the Time domain.
+  - name: math_perc_operations_end
+    description: Endline math percentage in the Operations domain.
+  - name: math_perc_data_handling_end
+    description: Endline math percentage in the Data Handling domain.
+  - name: factual_end
+    description: Endline factual comprehension score.
+  - name: inference_end
+    description: Endline inference score.
+  - name: critical_thinking_end
+    description: Endline critical thinking score.
+  - name: vocabulary_end
+    description: Endline vocabulary score.
+  - name: grammar_end
+    description: Endline grammar score.
+  - name: letter_sounds_end
+    description: Endline letter sounds score.
+  - name: cvc_words_end
+    description: Endline CVC words score.
+  - name: blends_end
+    description: Endline blends score.
+  - name: consonant_diagraph_end
+    description: Endline consonant diagraph score.
+  - name: magic_e_words_end
+    description: Endline magic E words score.
+  - name: vowel_diagraphs_end
+    description: Endline vowel diagraphs score.
+  - name: multi_syllabelle_words_end
+    description: Endline multi-syllabelle words score.
+  - name: passage_1_end
+    description: Endline Passage 1 score.
+  - name: passage_2_end
+    description: Endline Passage 2 score.
+  - name: rf_perc_end
+    description: Endline reading fluency percentage.
+  - name: developing_end
+    description: Endline Developing-level count or flag from the source assessment
+      sheet.
+  - name: beginner_end
+    description: Endline Beginner-level count or flag from the source assessment sheet.
+  - name: intermediate_end
+    description: Endline Intermediate-level count or flag from the source assessment
+      sheet.
+  - name: advanced_end
+    description: Endline Advanced-level count or flag from the source assessment sheet.
+  - name: rc_assessed_perc_end
+    description: Endline reading comprehension assessed percentage or label.
+  - name: rf_code_end
+    description: Endline reading fluency code.

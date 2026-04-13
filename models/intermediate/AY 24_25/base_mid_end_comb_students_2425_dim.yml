@@ -1,0 +1,70 @@
+version: 2
+models:
+- name: base_mid_end_comb_students_2425_dim
+  description: |-
+    Student dimension for AY 2024-25 that aligns baseline, midline, and endline identity and classroom attributes under a shared student_id, with attendance flags for each assessment round.
+
+    Grain: one row per student_id.
+
+    Depends on models `baseline_2425_stg`, `endline_2425_stg`, `midline_2425_stg`.
+  columns:
+  - name: student_id
+    description: Shared student identifier used to align records across all assessment
+      rounds.
+  - name: baseline_attendence
+    description: Boolean flag indicating whether the student has a baseline assessment
+      record.
+  - name: city_base
+    description: City recorded for the student in the baseline assessment.
+  - name: student_name_base
+    description: Student name captured in the baseline assessment.
+  - name: classroom_id_base
+    description: Classroom identifier recorded in the baseline assessment.
+  - name: pm_name_base
+    description: Program manager assigned to the student in the baseline assessment.
+  - name: school_name_base
+    description: School name recorded in the baseline assessment.
+  - name: fellow_name_base
+    description: Fellow responsible for the classroom in the baseline assessment.
+  - name: cohort_base
+    description: Cohort number recorded in the baseline assessment.
+  - name: grade_taught_base
+    description: Grade taught for the student in the baseline assessment.
+  - name: midline_attendence
+    description: Boolean flag indicating whether the student has a midline assessment
+      record.
+  - name: city_mid
+    description: City recorded for the student in the midline assessment.
+  - name: student_name_mid
+    description: Student name captured in the midline assessment.
+  - name: classroom_id_mid
+    description: Classroom identifier recorded in the midline assessment.
+  - name: pm_name_mid
+    description: Program manager assigned to the student in the midline assessment.
+  - name: school_name_mid
+    description: School name recorded in the midline assessment.
+  - name: fellow_name_mid
+    description: Fellow responsible for the classroom in the midline assessment.
+  - name: cohort_mid
+    description: Cohort number recorded in the midline assessment.
+  - name: grade_taught_mid
+    description: Grade taught for the student in the midline assessment.
+  - name: endline_attendence
+    description: Boolean flag indicating whether the student has an endline assessment
+      record.
+  - name: city_end
+    description: City recorded for the student in the endline assessment.
+  - name: student_name_end
+    description: Student name captured in the endline assessment.
+  - name: classroom_id_end
+    description: Classroom identifier recorded in the endline assessment.
+  - name: pm_name_end
+    description: Program manager assigned to the student in the endline assessment.
+  - name: school_name_end
+    description: School name recorded in the endline assessment.
+  - name: fellow_name_end
+    description: Fellow responsible for the classroom in the endline assessment.
+  - name: cohort_end
+    description: Cohort number recorded in the endline assessment.
+  - name: grade_taught_end
+    description: Grade taught for the student in the endline assessment.

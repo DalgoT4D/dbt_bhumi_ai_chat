@@ -1,0 +1,92 @@
+version: 2
+models:
+- name: overall_RF_analysis_subject_2425
+  description: City-grade summary of average reading fluency subskill and passage
+    scores across baseline, midline, and endline. The model aggregates the student-level
+    reading fluency component scores for students present in each round.
+  columns:
+  - name: city
+    description: City for the reporting row.
+  - name: grade
+    description: Grade for the reporting row.
+  - name: letter_sounds_base
+    description: Average student-level Letter Sounds reading fluency score for baseline
+      students in this city-grade group.
+  - name: cvc_words_base
+    description: Average student-level CVC Words reading fluency score for baseline
+      students in this city-grade group.
+  - name: blends_base
+    description: Average student-level Blends reading fluency score for baseline students
+      in this city-grade group.
+  - name: consonant_diagraph_base
+    description: Average student-level Consonant Diagraph reading fluency score for
+      baseline students in this city-grade group.
+  - name: magic_e_words_base
+    description: Average student-level Magic E Words reading fluency score for baseline
+      students in this city-grade group.
+  - name: vowel_diagraphs_base
+    description: Average student-level Vowel Diagraphs reading fluency score for baseline
+      students in this city-grade group.
+  - name: multi_syllabelle_words_base
+    description: Average student-level Multi-syllable Words reading fluency score
+      for baseline students in this city-grade group.
+  - name: passage_1_base
+    description: Average student-level Passage 1 reading fluency score for baseline
+      students in this city-grade group.
+  - name: passage_2_base
+    description: Average student-level Passage 2 reading fluency score for baseline
+      students in this city-grade group.
+  - name: letter_sounds_mid
+    description: Average student-level Letter Sounds reading fluency score for midline
+      students in this city-grade group.
+  - name: cvc_words_mid
+    description: Average student-level CVC Words reading fluency score for midline
+      students in this city-grade group.
+  - name: blends_mid
+    description: Average student-level Blends reading fluency score for midline students
+      in this city-grade group.
+  - name: consonant_diagraph_mid
+    description: Average student-level Consonant Diagraph reading fluency score for
+      midline students in this city-grade group.
+  - name: magic_e_words_mid
+    description: Average student-level Magic E Words reading fluency score for midline
+      students in this city-grade group.
+  - name: vowel_diagraphs_mid
+    description: Average student-level Vowel Diagraphs reading fluency score for midline
+      students in this city-grade group.
+  - name: multi_syllabelle_words_mid
+    description: Average student-level Multi-syllable Words reading fluency score
+      for midline students in this city-grade group.
+  - name: passage_1_mid
+    description: Average student-level Passage 1 reading fluency score for midline
+      students in this city-grade group.
+  - name: passage_2_mid
+    description: Average student-level Passage 2 reading fluency score for midline
+      students in this city-grade group.
+  - name: letter_sounds_end
+    description: Average student-level Letter Sounds reading fluency score for endline
+      students in this city-grade group.
+  - name: cvc_words_end
+    description: Average student-level CVC Words reading fluency score for endline
+      students in this city-grade group.
+  - name: blends_end
+    description: Average student-level Blends reading fluency score for endline students
+      in this city-grade group.
+  - name: consonant_diagraph_end
+    description: Average student-level Consonant Diagraph reading fluency score for
+      endline students in this city-grade group.
+  - name: magic_e_words_end
+    description: Average student-level Magic E Words reading fluency score for endline
+      students in this city-grade group.
+  - name: vowel_diagraphs_end
+    description: Average student-level Vowel Diagraphs reading fluency score for endline
+      students in this city-grade group.
+  - name: multi_syllabelle_words_end
+    description: Average student-level Multi-syllable Words reading fluency score
+      for endline students in this city-grade group.
+  - name: passage_1_end
+    description: Average student-level Passage 1 reading fluency score for endline
+      students in this city-grade group.
+  - name: passage_2_end
+    description: Average student-level Passage 2 reading fluency score for endline
+      students in this city-grade group.

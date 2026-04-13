@@ -1,0 +1,89 @@
+version: 2
+models:
+- name: student_school_RC_RF_Math_status
+  description: Student-level crosswalk of school assignment and round-specific reading
+    comprehension, reading fluency, and math status fields. Use this model to inspect
+    one student's location, school context, attendance flag, and subject status bands
+    across baseline, midline, and endline.
+  columns:
+  - name: student_id
+    description: Shared student identifier used to align records across all assessment
+      rounds.
+  - name: student_name_base
+    description: Student name captured in the baseline assessment.
+  - name: city_base
+    description: City recorded for the student in the baseline assessment.
+  - name: pm_name_base
+    description: Program manager assigned to the student in the baseline assessment.
+  - name: school_name_base
+    description: School name recorded in the baseline assessment.
+  - name: fellow_name_base
+    description: Fellow responsible for the classroom in the baseline assessment.
+  - name: grade_taught_base
+    description: Grade taught for the student in the baseline assessment.
+  - name: math_status_base
+    description: Baseline math status band for the student. Observed values in the
+      warehouse include Emergent, Below Grade Level, At Grade Level, Above Grade Level,
+      and Not Assessed.
+  - name: rc_status_base
+    description: Baseline reading comprehension status band for the student. Observed
+      values in the warehouse include Below Grade Level, At Grade Level, and Above
+      Grade Level.
+  - name: rf_status_base
+    description: Baseline reading fluency status band for the student. Observed values
+      in the warehouse include Advanced, Beginner, Developing, Emergent, and Not Assessed.
+  - name: baseline_attendence
+    description: True when the student has a baseline record in the combined student
+      dimension, false otherwise.
+  - name: student_name_mid
+    description: Student name captured in the midline assessment.
+  - name: city_mid
+    description: City recorded for the student in the midline assessment.
+  - name: pm_name_mid
+    description: Program manager assigned to the student in the midline assessment.
+  - name: school_name_mid
+    description: School name recorded in the midline assessment.
+  - name: fellow_name_mid
+    description: Fellow responsible for the classroom in the midline assessment.
+  - name: grade_taught_mid
+    description: Grade taught for the student in the midline assessment.
+  - name: math_status_mid
+    description: Midline math status band for the student. Observed values in the
+      warehouse include Emergent, Below Grade Level, At Grade Level, Above Grade Level,
+      and Not Assessed.
+  - name: rc_status_mid
+    description: Midline reading comprehension status band for the student. Observed
+      values in the warehouse include Below Grade Level, At Grade Level, and Above
+      Grade Level.
+  - name: rf_status_mid
+    description: Midline reading fluency status band for the student. Observed values
+      in the warehouse include Advanced, Beginner, Developing, Emergent, and Not Assessed.
+  - name: midline_attendence
+    description: True when the student has a midline record in the combined student
+      dimension, false otherwise.
+  - name: student_name_end
+    description: Student name captured in the endline assessment.
+  - name: city_end
+    description: City recorded for the student in the endline assessment.
+  - name: pm_name_end
+    description: Program manager assigned to the student in the endline assessment.
+  - name: school_name_end
+    description: School name recorded in the endline assessment.
+  - name: fellow_name_end
+    description: Fellow responsible for the classroom in the endline assessment.
+  - name: grade_taught_end
+    description: Grade taught for the student in the endline assessment.
+  - name: math_status_end
+    description: Endline math status band for the student. Observed values in the
+      warehouse include Emergent, Below Grade Level, At Grade Level, Above Grade Level,
+      and Not Assessed.
+  - name: rc_status_end
+    description: Endline reading comprehension status band for the student. Observed
+      values in the warehouse include Below Grade Level, At Grade Level, and Above
+      Grade Level.
+  - name: rf_status_end
+    description: Endline reading fluency status band for the student. Observed values
+      in the warehouse include Advanced, Beginner, Developing, Emergent, and Not Assessed.
+  - name: endline_attendence
+    description: True when the student has an endline record in the combined student
+      dimension, false otherwise.

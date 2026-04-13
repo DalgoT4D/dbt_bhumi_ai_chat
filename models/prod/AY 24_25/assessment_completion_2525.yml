@@ -1,0 +1,78 @@
+version: 2
+models:
+- name: assessment_completion_2525
+  description: City-grade summary of assessment completion for reading comprehension,
+    reading fluency, and math across baseline, midline, and endline. For each subject
+    and round, the model counts students marked present in that round, treats blank
+    or `Not Assessed` level/status values as unassessed, and returns both assessed
+    student counts and completion percentages.
+  columns:
+  - name: city
+    description: City for the reporting row. A row appears when the city-grade combination
+      exists in any assessment round.
+  - name: grade
+    description: Grade for the reporting row. A row appears when the city-grade combination
+      exists in any assessment round.
+  - name: total_students_base
+    description: Number of distinct students with `baseline_attendence` = true in
+      this city-grade group.
+  - name: total_students_mid
+    description: Number of distinct students with `midline_attendence` = true in this
+      city-grade group.
+  - name: total_students_end
+    description: Number of distinct students with `endline_attendence` = true in this
+      city-grade group.
+  - name: assessed_students_rc_base
+    description: Number of students assessed in reading comprehension at baseline
+      in this city-grade group.
+  - name: perc_comp_rc_base
+    description: Percentage of baseline students in this city-grade group who completed
+      the reading comprehension assessment.
+  - name: assessed_students_rc_mid
+    description: Number of students assessed in reading comprehension at midline
+      in this city-grade group.
+  - name: perc_comp_rc_mid
+    description: Percentage of midline students in this city-grade group who completed
+      the reading comprehension assessment.
+  - name: assessed_students_rc_end
+    description: Number of students assessed in reading comprehension at endline
+      in this city-grade group.
+  - name: perc_comp_rc_end
+    description: Percentage of endline students in this city-grade group who completed
+      the reading comprehension assessment.
+  - name: assessed_students_rf_base
+    description: Number of students assessed in reading fluency at baseline in this
+      city-grade group.
+  - name: perc_comp_rf_base
+    description: Percentage of baseline students in this city-grade group who completed
+      the reading fluency assessment.
+  - name: assessed_students_rf_mid
+    description: Number of students assessed in reading fluency at midline in this
+      city-grade group.
+  - name: perc_comp_rf_mid
+    description: Percentage of midline students in this city-grade group who completed
+      the reading fluency assessment.
+  - name: assessed_students_rf_end
+    description: Number of students assessed in reading fluency at endline in this
+      city-grade group.
+  - name: perc_comp_rf_end
+    description: Percentage of endline students in this city-grade group who completed
+      the reading fluency assessment.
+  - name: assessed_students_math_base
+    description: Number of students assessed in math at baseline in this city-grade
+      group.
+  - name: perc_comp_math_base
+    description: Percentage of baseline students in this city-grade group who completed
+      the math assessment.
+  - name: assessed_students_math_mid
+    description: Number of students assessed in math at midline in this city-grade
+      group.
+  - name: perc_comp_math_mid
+    description: Percentage of midline students in this city-grade group who completed
+      the math assessment.
+  - name: assessed_students_math_end
+    description: Number of students assessed in math at endline in this city-grade
+      group.
+  - name: perc_comp_math_end
+    description: Percentage of endline students in this city-grade group who completed
+      the math assessment.

@@ -1,0 +1,84 @@
+version: 2
+models:
+- name: overall_Math_analysis_subject_2425
+  description: City-grade summary of average overall math mastery and domain-wise
+    math mastery percentages across baseline, midline, and endline. Each metric is
+    the average of the student-level percentages recorded in the score fact for students
+    present in that round.
+  columns:
+  - name: city
+    description: City for the reporting row.
+  - name: grade
+    description: Grade for the reporting row.
+  - name: avg_mastery_base
+    description: Average overall math mastery percentage for baseline students in
+      this city-grade group.
+  - name: avg_perc_mastery_numbers_base
+    description: Average student-level math mastery percentage in the Numbers domain
+      for baseline students in this city-grade group.
+  - name: avg_perc_mastery_patterns_base
+    description: Average student-level math mastery percentage in the Patterns domain
+      for baseline students in this city-grade group.
+  - name: avg_perc_mastery_geometry_base
+    description: Average student-level math mastery percentage in the Geometry domain
+      for baseline students in this city-grade group.
+  - name: avg_perc_mastery_mensuration_base
+    description: Average student-level math mastery percentage in the Mensuration
+      domain for baseline students in this city-grade group.
+  - name: avg_perc_mastery_time_base
+    description: Average student-level math mastery percentage in the Time domain
+      for baseline students in this city-grade group.
+  - name: avg_perc_mastery_operations_base
+    description: Average student-level math mastery percentage in the Operations domain
+      for baseline students in this city-grade group.
+  - name: avg_perc_mastery_data_handling_base
+    description: Average student-level math mastery percentage in the Data Handling
+      domain for baseline students in this city-grade group.
+  - name: avg_mastery_mid
+    description: Average overall math mastery percentage for midline students in this
+      city-grade group.
+  - name: avg_perc_mastery_numbers_mid
+    description: Average student-level math mastery percentage in the Numbers domain
+      for midline students in this city-grade group.
+  - name: avg_perc_mastery_patterns_mid
+    description: Average student-level math mastery percentage in the Patterns domain
+      for midline students in this city-grade group.
+  - name: avg_perc_mastery_geometry_mid
+    description: Average student-level math mastery percentage in the Geometry domain
+      for midline students in this city-grade group.
+  - name: avg_perc_mastery_mensuration_mid
+    description: Average student-level math mastery percentage in the Mensuration
+      domain for midline students in this city-grade group.
+  - name: avg_perc_mastery_time_mid
+    description: Average student-level math mastery percentage in the Time domain
+      for midline students in this city-grade group.
+  - name: avg_perc_mastery_operations_mid
+    description: Average student-level math mastery percentage in the Operations domain
+      for midline students in this city-grade group.
+  - name: avg_perc_mastery_data_handling_mid
+    description: Average student-level math mastery percentage in the Data Handling
+      domain for midline students in this city-grade group.
+  - name: avg_mastery_end
+    description: Average overall math mastery percentage for endline students in this
+      city-grade group.
+  - name: avg_perc_mastery_numbers_end
+    description: Average student-level math mastery percentage in the Numbers domain
+      for endline students in this city-grade group.
+  - name: avg_perc_mastery_patterns_end
+    description: Average student-level math mastery percentage in the Patterns domain
+      for endline students in this city-grade group.
+  - name: avg_perc_mastery_geometry_end
+    description: Average student-level math mastery percentage in the Geometry domain
+      for endline students in this city-grade group.
+  - name: avg_perc_mastery_mensuration_end
+    description: Average student-level math mastery percentage in the Mensuration
+      domain for endline students in this city-grade group.
+  - name: avg_perc_mastery_time_end
+    description: Average student-level math mastery percentage in the Time domain
+      for endline students in this city-grade group.
+  - name: avg_perc_mastery_operations_end
+    description: Average student-level math mastery percentage in the Operations domain
+      for endline students in this city-grade group.
+  - name: avg_perc_mastery_data_handling_end
+    description: Average student-level math mastery percentage in the Data Handling
+      domain for endline students in this city-grade group.

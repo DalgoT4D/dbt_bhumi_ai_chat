@@ -1,0 +1,100 @@
+version: 2
+models:
+- name: midline_2425_stg
+  description: |-
+    Cleaned midline assessment staging model for AY 2024-25. Standardizes student, school, cohort, and assessment score fields from the raw midline sheet and keeps one row per student record with a nonblank student ID.
+
+    Grain: one row per midline student record.
+
+    Reads sources `fellowship_24_25_data.Raw_Data_Midline`.
+  columns:
+  - name: student_id_mid
+    description: Student identifier captured in the midline data.
+  - name: city_mid
+    description: City recorded for the student in the midline assessment.
+  - name: pm_name_mid
+    description: Program manager assigned to the student in the midline assessment.
+  - name: school_name_mid
+    description: School name recorded in the midline assessment.
+  - name: classroom_id_mid
+    description: Classroom identifier recorded in the midline assessment.
+  - name: fellow_name_mid
+    description: Fellow responsible for the classroom in the midline assessment.
+  - name: cohort_mid
+    description: Cohort number recorded in the midline assessment.
+  - name: grade_taught_mid
+    description: Grade taught for the student in the midline assessment.
+  - name: student_name_mid
+    description: Student name captured in the midline assessment.
+  - name: rc_level_mid
+    description: Midline reading comprehension level.
+  - name: rc_grade_level_mid
+    description: Midline reading comprehension grade level.
+  - name: rc_status_mid
+    description: Midline reading comprehension status.
+  - name: rf_status_mid
+    description: Midline reading fluency status.
+  - name: math_level_mid
+    description: Midline math level.
+  - name: math_status_mid
+    description: Midline math status.
+  - name: math_mastery_mid
+    description: Midline math mastery percentage.
+  - name: math_perc_numbers_mid
+    description: Midline math percentage in the Numbers domain.
+  - name: math_perc_patterns_mid
+    description: Midline math percentage in the Patterns domain.
+  - name: math_perc_geometry_mid
+    description: Midline math percentage in the Geometry domain.
+  - name: math_perc_mensuration_mid
+    description: Midline math percentage in the Mensuration domain.
+  - name: math_perc_time_mid
+    description: Midline math percentage in the Time domain.
+  - name: math_perc_operations_mid
+    description: Midline math percentage in the Operations domain.
+  - name: math_perc_data_handling_mid
+    description: Midline math percentage in the Data Handling domain.
+  - name: factual_mid
+    description: Midline factual comprehension score.
+  - name: inference_mid
+    description: Midline inference score.
+  - name: critical_thinking_mid
+    description: Midline critical thinking score.
+  - name: vocabulary_mid
+    description: Midline vocabulary score.
+  - name: grammar_mid
+    description: Midline grammar score.
+  - name: letter_sounds_mid
+    description: Midline letter sounds score.
+  - name: cvc_words_mid
+    description: Midline CVC words score.
+  - name: blends_mid
+    description: Midline blends score.
+  - name: consonant_diagraph_mid
+    description: Midline consonant diagraph score.
+  - name: magic_e_words_mid
+    description: Midline magic E words score.
+  - name: vowel_diagraphs_mid
+    description: Midline vowel diagraphs score.
+  - name: multi_syllabelle_words_mid
+    description: Midline multi-syllabelle words score.
+  - name: passage_1_mid
+    description: Midline Passage 1 score.
+  - name: passage_2_mid
+    description: Midline Passage 2 score.
+  - name: rf_perc_mid
+    description: Midline reading fluency percentage.
+  - name: developing_mid
+    description: Midline Developing-level count or flag from the source assessment
+      sheet.
+  - name: beginner_mid
+    description: Midline Beginner-level count or flag from the source assessment sheet.
+  - name: intermediate_mid
+    description: Midline Intermediate-level count or flag from the source assessment
+      sheet.
+  - name: advanced_mid
+    description: Midline Advanced-level count or flag from the source assessment sheet.
+  - name: rc_assessed_perc_mid
+    description: Midline reading comprehension assessed percentage or label.
+  - name: rf_code_mid
+    description: Midline reading fluency code.

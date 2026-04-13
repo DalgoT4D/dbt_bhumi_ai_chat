@@ -1,0 +1,25 @@
+version: 2
+models:
+- name: overall_RC_analysis_status_2525
+  description: City-grade summary of student counts by reading comprehension status
+    band across baseline, midline, and endline. Use this model to compare how many
+    students are below, at, or above grade level in reading comprehension in each
+    round.
+  columns:
+  - name: city
+    description: City for the reporting row.
+  - name: grade
+    description: Grade for the reporting row.
+  - name: rc_status
+    description: Reading comprehension status band for this row. Observed values in
+      the warehouse include Below Grade Level, At Grade Level, and Above Grade Level,
+      with blanks or nulls where the source is missing.
+  - name: student_count_base
+    description: Number of distinct baseline students in this city-grade-reading comprehension
+      status bucket.
+  - name: student_count_mid
+    description: Number of distinct midline students in this city-grade-reading comprehension
+      status bucket.
+  - name: student_count_end
+    description: Number of distinct endline students in this city-grade-reading comprehension
+      status bucket.
